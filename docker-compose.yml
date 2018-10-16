@@ -1,0 +1,17 @@
+version: '2.1'
+
+services:
+  php:
+    build: .
+    ports:
+    - "8020:80"
+    volumes:
+    - ./src:/var/www/html
+
+  # db:
+  #   image: mysql:5.7
+  #   volumes:
+  #   - /var/lib/mysql
+  #   environment:
+  #   - MYSQL_ROOT_PASSWORD=123456
+  #   - MYSQL_DATABASE=danny
