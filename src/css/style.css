@@ -1,0 +1,65 @@
+
+
+.form-inline-space
+{
+    margin-bottom: 15px;
+}
+
+body
+{
+    color: #6c6c6c;
+}
+
+h2
+{
+    color: #175e99;
+    font-family: Heuvetica, Arial, Sans;
+    text-decoration: none;
+    border-bottom: 2px solid #175e99;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: bold;
+}
+
+header
+{
+    margin-bottom: 22px;
+    font-size: 12px;
+    font-style: italic;
+    color: #b5b5b5;
+}
+
+.icon-help
+{
+    display: inline-block;
+    padding: 2px 5px 0px;
+    color: #ffffff;
+    background-color: #d14f27;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+h2 .glyphicon
+{
+    font-size: 21px;
+    padding-right: 5px;
+}
+
+.panel-default>.panel-heading
+{
+    color: #ffffff;
+    background-color: #175e99;
+    border-color: #ddd;
+}
+
+.input-group-addon
+{
+    color: #ffffff;
+    background-color: #175e99;
+}
+
+label
+{
+    color: #175e99;
+}
+
