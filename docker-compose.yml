@@ -4,18 +4,29 @@ services:
   php:
     build: .
     ports:
-    - "8020:80"
+      - "8020:80"
     volumes:
-    - ./src:/var/www/html
+      - ./src:/var/www/html
     depends_on: 
-    - db
+      - db
+    links:
+      - db
 
   db:
     ports:
-    - "3306:3306"
+      - "3306:3306"
     image: mysql:5.7
     volumes:
-    - ./db:/var/lib/mysql
+      - ./db:/var/lib/mysql
     environment:
-    - MYSQL_ROOT_PASSWORD=123456
-    - MYSQL_DATABASE=outside
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=outside
+
+  app:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - db
+    ports:
+      - 8021:80
+#    environment:
+#      - PMA_ARBITRARY=1

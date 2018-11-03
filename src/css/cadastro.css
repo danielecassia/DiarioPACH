@@ -2,3 +2,18 @@ html,
 body {
   height: 100%;
 }
+.cd{
+  align-items: center;
+}
+.nm{
+  align-items: center;
+}
+.email{
+  align-items: center;
+}
+.dt_nasc{
+  align-items: center;
+}
+.sex{
+  align-items: center;
+}
