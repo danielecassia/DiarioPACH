@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,47 +13,53 @@
         <title>CADASTRO</title>
     </head>
     <body>
-        <!--seção 1 
-        <section class="container">
+        <form class="container" action="../php/cadastro.php" method="POST" item-height="50%">
             <div class="row">
                 <div class="col-sm-12">
                     <header>
-                        <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Você</h2>
-                        <span>Nessa seção, preencha seus dados pessoais</span>
+                        <h3><b><span>Nessa seção, preencha seus dados pessoais</span></b></h3>
                     </header>
                 </div>
-            </div>-->
+            </div>
+            <!-- Nesta seção temos os dados do usuário-->
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="nm">
+                        <label for="txtNomeCompleto" class="col-sm-3 col-md-2 control-label">Nome:</label>
+                        <input type="text" id="txtNomeCompleto" name="nm_user" class="form-control" placeholder="Preencha seu nome completo ">
+                    </div>
 
-        <!-- Nesta seção temos o nome e o email  -->
-        <div class="form-horizontal">
-            <div class="form-group">
-                <div class="cd">
-                    <label for="txtCodigo" class="col-sm-3 col-md-2 control-label">Código:</label>
-                    <input type="text" id="txtCodigo" class="form-control" placeholder="">
-                </div>
+                    <div class="dt_nasc">
+                            <label for="txtDataNascimento" class="col-sm-3 col-md-2 control-label">Data de Nascimento:</label>
+                            <input type="date" id="txtDataNascimento" name="dt_nasc" class="form-control" placeholder="">
+                    </div>
 
-                <label for="txtNomeCompleto" class="col-sm-3 col-md-2 control-label">Nome:</label>
-                <div class="nm">
-                    <input type="text" id="txtNomeCompleto" class="form-control" placeholder="Preencha, corretamente, seu nome ">
-                </div>
+                    <div class="email">
+                        <label for="txtEmail" class="col-sm-1 col-md-2 control-label">Email:</label>
+                        <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Preencha seu email">
+                    </div>
 
-                <label for="txtEmail" class="col-sm-1 col-md-2 control-label">Email:</label>
-                <div class="email">
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Preencha seu email">
-                </div>
+                    <div class="sex">
+                        <label  for="txtSexo" class="col-sm-3 col-md-2 control-label">Sexo:</label><br>
+                        <input type="radio" name="sexo" value="m"> Masculino
+                        <input type="radio" name="sexo" value="f"> Feminino
+                    </div>
+                    
+                    <div class="senha">
+                            <label for="txtSenha" class="col-sm-3 col-md-2 control-label">Senha:</label>
+                            <input type="password" id="txtSenha" name="senha" class="form-control" placeholder="">
+                    </div>
 
-                <label for="txtDataNascimento" class="col-sm-3 col-md-2 control-label">Data de Nascimento:</label>
-                <div class="dt_nasc">
-                    <input type="text" id="txtDataNascimento" class="form-control" placeholder="">
-                </div>
+                    <div class="senha">
+                            <label for="txtSenhaC" class="col-sm-3 col-md-2 control-label">Confirmar Senha:</label>
+                            <input type="password" id="txtSenhaC" name="confirmarSenha" class="form-control" placeholder="">
+                    </div>
 
-                <label for="txtDataNascimento" class="col-sm-3 col-md-2 control-label">Data de Nascimento:</label>
-                <div class="sex">
-                    <input type="radio" name="rdSexo" value="masc"> Masculino
-                    <input type="radio" name="rdSexo" value="fem"> Feminino
+                    <br><br>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
                 </div>
             </div>
-        </div>       
+        </form>     
     </body>
 </html>
 

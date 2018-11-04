@@ -22,20 +22,26 @@ class User extends Model {
 		else {
 			return false;
 		}
-		
 	}
 
-	// public function insert(array $attributes) {
-	// 	$sql = "insert into {$this->table}(name,email,password) values(:name,:email,:password)";
+	public function insert(array $attributes) {
+		$sql = "insert into {$this->table}
+			  (nm_user, dt_nasc, email, sexo, senha)
+		value (:nm_user, :dt_nasc, :email, :sexo, :senha)";
 
-	// 	$insert = $this->connection->prepare($sql);
+		$insert = $this->connection->prepare($sql);
+		foreach ($attributes as $key => $value) {
+			$insert->bindValue($key, $value);
+		}
+	
+		return $insert->execute($attributes);
 
-	// 	// foreach ($attributes as $key => $value) {
-	// 	// $insert->bindValue($key, $value);
-	// 	// }
-
-	// 	return $insert->execute($attributes);
-	// }
+		// $list->bindValue('nome', $nm_user);	
+		// $list->bindValue('dt_nasc', $dt_nasc);
+		// $list->bindValue('email', $user);	
+		// $list->bindValue('sexo', $sexo);
+		// $list->bindValue('senha', $senha);
+	}
 
 	// public function update(array $attributes) {
 	// 	$sql = "update {$this->table} set name = :name, email = :email, password =:password where id = :id";
