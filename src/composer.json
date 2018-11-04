@@ -1,0 +1,9 @@
+{ 
+    "description": "Projeto da Danny",
+    "name": "DiarioPACH",
+    "autoload": {
+        "psr-4": {
+            "php\\":"php"
+        }
+    }
+}
