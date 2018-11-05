@@ -8,7 +8,7 @@ body {
 .topo{
     box-align: center;
     height: 30%;
-    width: 100%;
+	width: 100%;
 }
 .foto{
 	position: relative;
@@ -35,8 +35,9 @@ body {
 	height: 100%;
 }
 .lado2{
-	height: 640px;
-	overflow-y: auto; 
+	height: 630px;
+	overflow-y: auto;
+	margin-bottom:-20px; 
 	margin-top: 20px;
 	margin-left: 20px;
 	background-color: #FAFAFA; 
