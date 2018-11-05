@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <meta name="description" content="Exemplo de Formulário Utilizando o Bootstrap">
-        <!-- <script src="//code.jquery.com/jquery.min.js"></script>-->
-        <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/style.css" type="text/css" />-->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous">
+        <link href="../css/cadastro.css" rel="stylesheet">
+        <meta name="description" content="">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CADASTRO</title>
     </head>
+
     <body>
-        <form class="container" action="../php/cadastro.php" method="POST" item-height="50%">
-            <div class="row">
-                <div class="col-sm-12">
-                    <header>
-                        <h3><b><span>Nessa seção, preencha seus dados pessoais</span></b></h3>
-                    </header>
-                </div>
+        <div class="container">
+            <div class="frase">
+                <h1 class="tex"><b> Cadastro de Usuário </b></h1>
             </div>
-            <!-- Nesta seção temos os dados do usuário-->
-            <div class="form-horizontal">
-                <div class="form-group">
-                    <div class="nm">
-                        <label for="txtNomeCompleto" class="col-sm-3 col-md-2 control-label">Nome:</label>
-                        <input type="text" id="txtNomeCompleto" name="nm_user" class="form-control" placeholder="Preencha seu nome completo ">
+            <div class="">
+                <form action="../php/cadastro.php" method="POST" item-height="50%">
+                    <div class="form-group">
+                        <label for="inputNome">Nome</label>
+                        <input type="text" class="form-control" name="nm_user" id="inputNome" placeholder="Nome">
                     </div>
-
-                    <div class="dt_nasc">
-                            <label for="txtDataNascimento" class="col-sm-3 col-md-2 control-label">Data de Nascimento:</label>
-                            <input type="date" id="txtDataNascimento" name="dt_nasc" class="form-control" placeholder="">
+        
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
                     </div>
-
-                    <div class="email">
-                        <label for="txtEmail" class="col-sm-1 col-md-2 control-label">Email:</label>
-                        <input type="email" class="form-control" id="txtEmail" name="email" placeholder="Preencha seu email">
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputDtNasc">Data de Nascimnto</label>
+                            <input type="date" class="form-control" name="dt_nasc" id="inputDtNasc" placeholder="Email">
+                        </div>
+        
+                        <div class="form-group col-md-6">
+                            <label for="inputSexo">Sexo</label>
+                            <select id="inputSexo" class="form-control" name="sexo">
+                                <option value="f"> Feminino </option>
+                                <option value="m"> Masculino </option>
+                            </select>
+                        </div>
                     </div>
-
-                    <div class="sex">
-                        <label  for="txtSexo" class="col-sm-3 col-md-2 control-label">Sexo:</label><br>
-                        <input type="radio" name="sexo" value="m"> Masculino
-                        <input type="radio" name="sexo" value="f"> Feminino
+        
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputSenha">Senha</label>
+                            <input type="password" class="form-control" name="senha" id="inputSenha" placeholder="Senha">
+                        </div>
+        
+                        <div class="form-group col-md-6">
+                            <label for="inputConfirmarSenha">Confirmar Senha</label>
+                            <input type="password" class="form-control" name="confirmarSenha" id="inputConfirmarSenha" placeholder="Confirmar Senha">
+                        </div>
                     </div>
-                    
-                    <div class="senha">
-                            <label for="txtSenha" class="col-sm-3 col-md-2 control-label">Senha:</label>
-                            <input type="password" id="txtSenha" name="senha" class="form-control" placeholder="">
+                    <br>
+                    <div class="alinhamntoBotao align-bottom">
+                        <button type="submit" class="btn btn-primary form-group col-md-3 ">Cadastrar</button>
                     </div>
-
-                    <div class="senha">
-                            <label for="txtSenhaC" class="col-sm-3 col-md-2 control-label">Confirmar Senha:</label>
-                            <input type="password" id="txtSenhaC" name="confirmarSenha" class="form-control" placeholder="">
-                    </div>
-
-                    <br><br>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
-                </div>
+                </form>
             </div>
-        </form>     
+        </div>
+        
+        
     </body>
-</html>
 
+</html>

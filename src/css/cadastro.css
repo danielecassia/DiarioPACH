@@ -1,19 +1,24 @@
-/* html,
+html,
 body {
   height: 100%;
-}
-.cd{
+  display: flex;
+  flex: 1;
   align-items: center;
+  justify-content: center;
 }
-.nm{
-  align-items: center;
+.topo{
+  box-align: center;
+  height: 30%;
+  width: 100%;
 }
-.email{
-  align-items: center;
+.tudo{
+  margin-top: 100px;
 }
-.dt_nasc{
-  align-items: center;
+.frase{
+  margin-top: -200px;
+  margin-bottom: 115px;
+  text-align: center;
 }
-.sex{
-  align-items: left;
+/* .alinhamntoBotao{
+  margin-left: 50%;
 } */

@@ -13,13 +13,19 @@
   ];
   $cadastroSucesso = $user->insert($dadosCadastro);
 
-  if($cadastroSucesso) {
+  if ($_POST['senha'] != $_POST['confirmarSenha'])
+  {
+    // melhorar mensagem
+    echo 'As senhas não são similares!';
+  }
+  else if($cadastroSucesso) {
     header('Location: ../html/login.html');
   }
   else {
     // melhorar mensagem
     echo 'FRACASSO!';
   }
+
 
   // mostrar todas as variáveis na tela
   // var_dump($users);

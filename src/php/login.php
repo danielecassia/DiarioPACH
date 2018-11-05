@@ -7,7 +7,7 @@
   $userValido = $user->verificaUserPassword($_POST["email"], $_POST["senha"]);
 
   if($userValido) {
-    echo 'Usuário Válido!';
+    header('Location: ../html/index.html');
   }
   else {
     echo 'Usuário Inválido!';

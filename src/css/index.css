@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+.container{
+    height: 100%;
+} 
+.topo{
+    box-align: center;
+    height: 30%;
+    width: 100%;
+}
+.foto{
+	position: relative;
+    top: -140px;
+	left: 20px;
+	border-radius: 100px;
+	border: 3px solid black;
+    width: 200px;
+	height: 200px;
+	overflow: hidden;
+	z-index: 9;
+}
+.lado1{
+	vertical-align: center;
+	margin-top: 20px;
+	margin-right: -20px;
+    background-color: white;    
+}
+.formatBotao{
+	align-items: center;
+	margin-top: 100px;
+}
+.row100{
+	height: 100%;
+}
+.lado2{
+	height: 640px;
+	overflow-y: auto; 
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #FAFAFA; 
+}
+
