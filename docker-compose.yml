@@ -27,6 +27,6 @@ services:
     links:
       - db
     ports:
-      - 8021:80
+      - 8029:80
 #    environment:
 #      - PMA_ARBITRARY=1
