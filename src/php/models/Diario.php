@@ -53,9 +53,6 @@ class Diario extends Model {
 		}
 		$this->connection->commit();
 		return true;
-		// $insertAtv = $this->connection->prepare($sqlAtv);
-		// $insertAtv->bindValue($key, $value);
-		// return $insertAtv->execute();
 
 		// $insertRemedio = $this->connection->prepare($sqlRemedio);
 		// $insertRemedio->bindValue($key, $value);
