@@ -2,40 +2,21 @@
 
 namespace php\models;
 
-class User extends Model {
+class Post extends Model {
 
-	protected $table = 'tb_user';
-
-	public function verificaUserPassword($user, $senha) {
-		$sql = "select * from {$this->table}
-				where email= :email and senha= :senha";
-
-		$list = $this->connection->prepare($sql);
-		$list->bindValue('email', $user);	
-		$list->bindValue('senha', $senha);	
-		$list->execute();
-
-		$fetch = $list->fetch();
-		// if($fetch->Total == '1') {
-		// 	return true;
-		// }
-		// else {
-		// 	return false;
-		// }
-		return $fetch;
-	}
+	protected $table = 'tb_post';
 
 	public function insert(array $attributes) {
 		$sql = "insert into {$this->table}
-			  (nm_user, dt_nasc, email, sexo, senha)
-		value (:nm_user, :dt_nasc, :email, :sexo, :senha)";
+			  (titulo, dt_hr, humor, sexo, sintomas, texto, peso, agua, sono, atv_fisica, remedio)
+		value (:titulo, :dt_hr, :humor, :sexo, :sintomas, :texto, :peso, :agua, :sono, :atv_fisica, :remedio)";
 
 		$insert = $this->connection->prepare($sql);
 		foreach ($attributes as $key => $value) {
 			$insert->bindValue($key, $value);
 		}
 	
-		return $insert->execute();
+		return $insert->execute($attributes);
 
 		// $list->bindValue('nome', $nm_user);	
 		// $list->bindValue('dt_nasc', $dt_nasc);

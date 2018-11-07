@@ -1,15 +1,24 @@
 <?php
+  session_start();
   require "../bootstrap.php";
 
   use php\models\User;
 
   $user = new User;
-  $userValido = $user->verificaUserPassword($_POST["email"], $_POST["senha"]);
+  $user = $user->verificaUserPassword($_POST["email"], $_POST["senha"]);
 
-  if($userValido) {
+  if($user != null) {
+    $_SESSION['email'] = $_POST["email"];
+    $_SESSION['nome'] = $user->nm_user;
+    $_SESSION['cd'] = $user->cd_user;
+    $_SESSION['logado'] = true;
     header('Location: ../html/index.html');
   }
   else {
+    unset ($_SESSION['email']);
+    unset ($_SESSION['cd']);
+    unset ($_SESSION['nome']);
+    $_SESSION['logado'] = false;
     echo 'Usuário Inválido!';
   }
 
