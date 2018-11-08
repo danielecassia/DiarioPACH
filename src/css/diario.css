@@ -73,7 +73,7 @@ alinhamentoTitulo.estilo{
 }
 .outrosSelecionado + label {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .outrosSelecionado + label img {
     margin: 0 !important;
@@ -92,7 +92,7 @@ alinhamentoTitulo.estilo{
 .atvSelecionado + label {
     cursor: pointer;
     text-align: center;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .atvSelecionado + label img {
     margin: 0 !important;
