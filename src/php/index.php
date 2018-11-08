@@ -3,6 +3,13 @@ session_start();
 if ($_SESSION['logado'] != true) {
     header('Location: ../html/login.html');
 }
+require "../bootstrap.php";
+
+  use php\models\Diario;
+
+  $diario = new Diario;
+  
+  $listPost = $diario->all();
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +25,9 @@ if ($_SESSION['logado'] != true) {
     <body>
         <div class="container">
             <div class="topo">
-                <img class="mb-4" src="../img/capa.png" alt="" width="100%" height="100%" class="float-left">
+                <img class="mb-4" src="../img/capaDefault.jpg" alt="" width="100%" height="100%" class="float-left">
                 <div class="foto">
-                    <img src="../img/usuario.jpg" class="img-circle" alt="" width="200" height="200">
+                    <img src="../img/userIndex.png" class="img-circle" alt="" width="200" height="200">
                 </div>
             </div>
             <div class="tudo2">
@@ -28,48 +35,23 @@ if ($_SESSION['logado'] != true) {
                     <div class="col">
                         <div class="lado1">
                             <div class="btn-group-vertical formatBotao container">
-                                <a class="btn btn-outline-dark" href="#" role="button">Alterar Foto de Perfil</a><br>
-                                <a class="btn btn-outline-dark" href="#" role="button">Alterar Foto de Capa</a><br>
-                                <a class="btn btn-outline-dark" href="#" role="button">Alterar Dados</a><br>
+                                <a class="btn btn-outline-dark" href="./perfil.php" role="button">Alterar Foto de Perfil</a><br>
+                                <a class="btn btn-outline-dark" href="./capa.php" role="button">Alterar Foto de Capa</a><br>
+                                <a class="btn btn-outline-dark" href="./dados.php" role="button">Alterar Dados</a><br>
                                 <a class="btn btn-outline-primary" href="./diarioForm.php" role="button"><b>ESCREVER</b></a><br>
-                                <a class="btn btn-outline-danger" href="#" role="button"><b>SAIR</b></a><br>
+                                <a class="btn btn-outline-danger" href="./encerar.php" role="button"><b>SAIR</b></a><br>
                             </div> 
                         </div>
                     </div>
 
                     <div class="col-9">
                         <div class="lado2">
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
-                            <p> teste teste teste teste este teste teste teste este teste teste testeeste teste teste testeeste teste teste teste </p>
+                             <?php 
+                                foreach ($listPost as $item) {
+                                    echo "<font color='#8A084B' align='justify'><b><h1> $item->titulo </h1></font></b>";
+                                    echo "<font color='#04B4AE' align='right'><b><h3> $item->dt_hr </h3></font></b>";
+                                }
+                            ?> 
                         </div>
                     </div>
                 </div>

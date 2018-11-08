@@ -19,7 +19,7 @@ if ($_SESSION['logado'] != true) {
     <body>
         <div class="container">
             <form action="./diarioInsert.php" method="POST" item-height="50%">
-            <br><br><br>
+            <br><br>
                 <div class="form-row">
                     <div class="corTitulo">
                     <h2><b>Título</b></h2>
@@ -110,7 +110,7 @@ if ($_SESSION['logado'] != true) {
                         <img class="mb-4" src="../img/Icones/sintomas.png" id="sintomas" alt="" width="50%" height="70%"  class="float-left">
                     </div>
                     <div class='form-group col-md-12' id='sintomasDiv' style='display: none'>
-                        <textarea name="sintomas" cols='122' rows='10'></textarea>
+                        <textarea name="sintomas" cols='122' rows='5'></textarea>
                     </div>
                 </div
                 <br>
@@ -121,7 +121,7 @@ if ($_SESSION['logado'] != true) {
                         <img class="mb-4" src="../img/Icones/texto.svg" id="texto" alt="" width="90%" height="90%"  class="float-left">
                     </div>
                     <div class='form-group col-md-12' id='textoDiv' style='display: none'>
-                        <textarea name="texto" cols='122' rows='50'></textarea>
+                        <textarea name="texto" cols='122' rows='10'></textarea>
                     </div>
                 </div>
                 <br>
@@ -150,31 +150,31 @@ if ($_SESSION['logado'] != true) {
                     <div class="form-group col-md-12 alinhamentoAtv">
                         <input type="checkbox" name="atv_fisica[]" value="1" id="corrida" class="atvSelecionado">
                             <label for="corrida" id="corri">
-                                <img class="mb-4" src="../img/Icones/equipe.svg" id="agua" alt="" width="80%" height="80%"  class="float-left"><br>Corrida
+                                <img class="mb-4" src="../img/Icones/corrida.png" id="co" alt="" width="115%" height="115%"  class="float-left"><br>Corrida
                             </label>
                         <input type="checkbox" name="atv_fisica[]" value="2" id="ciclismo" class="atvSelecionado">
                             <label for="ciclismo" id="ciclis">
-                                <img class="mb-4" src="../img/Icones/equipe.svg" id="agua" alt="" width="80%" height="80%"  class="float-left"><br>Ciclismo
+                                <img class="mb-4" src="../img/Icones/ciclismo.png" id="ci" alt="" width="115%" height="115%"  class="float-left"><br>Ciclismo
                             </label>
                         <input type="checkbox" name="atv_fisica[]" value="3" id="academia" class="atvSelecionado">
                             <label for="academia" id="acad">
-                                <img class="mb-4" src="../img/Icones/equipe.svg" id="agua" alt="" width="80%" height="80%"  class="float-left"><br>Academia
+                                <img class="mb-4" src="../img/Icones/academia.png" id="agua" alt="" width="100%" height="100%"  class="float-left"><br>Academia
                             </label>
                         <input type="checkbox" name="atv_fisica[]" value="4" id="dance_aerob" class="atvSelecionado">
                             <label for="dance_aerob" id="dace">
-                                <img class="mb-4" src="../img/Icones/danca.svg" id="agua" alt="" width="60%" height="60%"  class="float-left"><br>Dança Aeróbica
+                                <img class="mb-4" src="../img/Icones/danca.png" id="agua" alt="" width="60%" height="60%"  class="float-left"><br>Dança Aeróbica
                             </label>
-                        <input type="checkbox" name="atv_fisica[]" value="5" id="yoga" class="atvSelecionado">
-                            <label for="yoga" id="id_yoga">
-                                <img class="mb-4" src="../img/Icones/equipe.svg" id="agua" alt="" width="80%" height="80%"  class="float-left"><br>Yoga
+                        <input type="checkbox" name="atv_fisica[]" value="5" id="ioga" class="atvSelecionado">
+                            <label for="ioga" id="id_ioga">
+                                <img class="mb-4" src="../img/Icones/ioga.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Ioga
                             </label>
                         <input type="checkbox" name="atv_fisica[]" value="6" id="natacao" class="atvSelecionado">
                             <label for="natacao" id="nat">
-                                <img class="mb-4" src="../img/Icones/nadar.svg" id="agua" alt="" width="60%" height="60%"  class="float-left"><br>Natação
+                                <img class="mb-4" src="../img/Icones/natacao.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Natação
                             </label>
                         <input type="checkbox" name="atv_fisica[]" value="7" id="esp_equipe" class="atvSelecionado">
                             <label for="esp_equipe" id="esporte">
-                                <img class="mb-4" src="../img/Icones/equipe.svg" id="agua" alt="" width="80%" height="80%"  class="float-left"><br>Esporte de Equipe
+                                <img class="mb-4" src="../img/Icones/equipe.png" id="agua" alt="" width="55%" height="55%"  class="float-left"><br>Esporte de Equipe
                             </label>
                     </div>
                 </div>
@@ -186,7 +186,7 @@ if ($_SESSION['logado'] != true) {
                         <img class="mb-4" src="../img/Icones/medicamento.svg" id="med" alt="" width="110%" height="110%"  class="float-left">
                     </div>
                     <div class='form-group col-md-12' id='medDiv' style='display: none'>
-                        <textarea name="medicamentos" cols='122' rows='10'></textarea>
+                        <textarea name="medicamentos" cols='122' rows='5'></textarea>
                     </div>
                 </div
                 <br><br>
@@ -201,6 +201,7 @@ if ($_SESSION['logado'] != true) {
 
         <!-- SCRIPT JAVAS -->
         <script>
+            //CLICK AND DISPLAY - PESO
             var btnPeso = document.getElementById('peso');
             btnPeso.onclick = function(){
                 var btnPesoDiv = document.getElementById('pesoDiv');
@@ -213,7 +214,7 @@ if ($_SESSION['logado'] != true) {
                     btnPesoDiv.style.display = 'none';
                 }
             }
-
+            //CLICK AND DISPLAY - SONO
             var btnSono = document.getElementById('sono');
             btnSono.onclick = function(){
                 var btnSonoDiv = document.getElementById('sonoDiv');
@@ -226,7 +227,7 @@ if ($_SESSION['logado'] != true) {
                     btnSonoDiv.style.display = 'none';
                 }
             }
-
+            //CLICK AND DISPLAY - AGUA
             var btnAgua= document.getElementById('agua');
             btnAgua.onclick = function(){
                 var aguaDiv = document.getElementById('aguaDiv');
@@ -239,7 +240,7 @@ if ($_SESSION['logado'] != true) {
                     aguaDiv.style.display = 'none';
                 }
             }
-
+            //CLICK AND DISPLAY - SINTOMAS
             var btnSintomas= document.getElementById('sintomas');
             btnSintomas.onclick = function(){
                 var sintomasDiv = document.getElementById('sintomasDiv');
@@ -252,7 +253,7 @@ if ($_SESSION['logado'] != true) {
                     sintomasDiv.style.display = 'none';
                 }
             }
-
+            //CLICK AND DISPLAY - TEXTO
             var btnTexto= document.getElementById('texto');
             btnTexto.onclick = function(){
                 var textoDiv = document.getElementById('textoDiv');
@@ -265,7 +266,7 @@ if ($_SESSION['logado'] != true) {
                     textoDiv.style.display = 'none';
                 }
             }
-
+            //CLICK AND DISPLAY - MEDICAMENTOS
             var btnMed= document.getElementById('med');
             btnMed.onclick = function(){
                 var medDiv = document.getElementById('medDiv');
@@ -278,6 +279,19 @@ if ($_SESSION['logado'] != true) {
                     medDiv.style.display = 'none';
                 }
             }
+
+            //FORMATAÇÃO DOS CAMPO - MÁSCARA
+            function formata(src, mask) {
+                var i = src.value.length;
+                var saida = mask.substring(0,1);
+                var texto = mask.substring(i) 
+                
+                if (texto.substring(0,1) != saida)
+                {
+                    src.value += texto.substring(0,1);
+                }
+            }
+
         </script>
     </body>
 </html>

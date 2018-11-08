@@ -4,7 +4,12 @@ body {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  background-image: url("../img/01.jpg");
+  background-repeat: no-repeat, repeat;
+  background-color: black;
+}
+.comtainer{
+  background-image: url(01.jpg);
 }
 .topo{
   box-align: center;
@@ -19,4 +24,8 @@ body {
   margin-bottom: 115px;
   text-align: center;
 }
+
+/* .alinhamento{
+  text-align: right;
+} */
 

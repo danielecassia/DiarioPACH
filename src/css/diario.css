@@ -7,7 +7,7 @@ alinhamentoTitulo.estilo{
 }
 
 h2{
-    color:#8A084B;
+    color:#8A084B;  
 }
 h3{
     color:#04B4AE;
@@ -80,7 +80,7 @@ alinhamentoTitulo.estilo{
 }
 
 .alinhamentoAtv{
-    text-align: justify;
+    text-align: center;
 }
 .atvSelecionado{
     display: none;
@@ -96,6 +96,9 @@ alinhamentoTitulo.estilo{
 }
 .atvSelecionado + label img {
     margin: 0 !important;
+}
+#ci{
+    margin-right: 100px;
 }
 
 .alinhamento{

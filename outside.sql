@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Tempo de geração: 05/11/2018 às 17:43
+-- Tempo de geração: 08/11/2018 às 17:23
 -- Versão do servidor: 5.7.24
 -- Versão do PHP: 7.2.8
 
@@ -27,6 +27,25 @@ USE `outside`;
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tb_atvFisica`
+--
+
+DROP TABLE IF EXISTS `tb_atvFisica`;
+CREATE TABLE `tb_atvFisica` (
+  `cd_atv` int(11) NOT NULL,
+  `cd_post` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `tb_atvFisica`
+--
+
+INSERT INTO `tb_atvFisica` (`cd_atv`, `cd_post`) VALUES
+(4, 11);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tb_outros`
 --
 
@@ -35,6 +54,13 @@ CREATE TABLE `tb_outros` (
   `cd_outros` int(11) NOT NULL,
   `cd_post` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `tb_outros`
+--
+
+INSERT INTO `tb_outros` (`cd_outros`, `cd_post`) VALUES
+(2, 11);
 
 -- --------------------------------------------------------
 
@@ -46,22 +72,23 @@ DROP TABLE IF EXISTS `tb_post`;
 CREATE TABLE `tb_post` (
   `cd_post` int(11) NOT NULL,
   `cd_user` int(11) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `dt_hr` datetime NOT NULL,
   `humor` int(11) DEFAULT NULL,
   `sintomas` varchar(100) DEFAULT NULL,
   `texto` varchar(3000) DEFAULT NULL,
   `peso` decimal(10,2) DEFAULT NULL,
   `agua` decimal(10,2) DEFAULT NULL,
   `sono` decimal(10,2) DEFAULT NULL,
-  `atv_fisica` int(11) DEFAULT NULL,
-  `remedio` varchar(45) DEFAULT NULL
+  `medicamentos` varchar(3000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Fazendo dump de dados para tabela `tb_post`
 --
 
-INSERT INTO `tb_post` (`cd_post`, `cd_user`, `humor`, `sintomas`, `texto`, `peso`, `agua`, `sono`, `atv_fisica`, `remedio`) VALUES
-(1, 3, 1, 'nada', 'teste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste\r\nteste teste teste teste teste teste', '56.50', '2.00', '8.00', NULL, NULL);
+INSERT INTO `tb_post` (`cd_post`, `cd_user`, `titulo`, `dt_hr`, `humor`, `sintomas`, `texto`, `peso`, `agua`, `sono`, `medicamentos`) VALUES
+(11, 9, 'Teste', '2018-11-08 16:54:33', 1, 'Qualquer sintoma', 'este testando 123 código do teste testando..............', '44.40', '1.50', '4.00', 'Não sei nome');
 
 -- --------------------------------------------------------
 
@@ -76,19 +103,28 @@ CREATE TABLE `tb_user` (
   `dt_nasc` datetime NOT NULL,
   `email` varchar(45) NOT NULL,
   `sexo` char(1) NOT NULL,
-  `senha` varchar(45) NOT NULL
+  `senha` varchar(45) NOT NULL,
+  `ft_perfil` varchar(100) DEFAULT NULL,
+  `ft_capa` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Fazendo dump de dados para tabela `tb_user`
 --
 
-INSERT INTO `tb_user` (`cd_user`, `nm_user`, `dt_nasc`, `email`, `sexo`, `senha`) VALUES
-(3, 'João Souza', '2018-11-13 00:00:00', 'joaosouza@gmail.com', 'm', '123456');
+INSERT INTO `tb_user` (`cd_user`, `nm_user`, `dt_nasc`, `email`, `sexo`, `senha`, `ft_perfil`, `ft_capa`) VALUES
+(9, 'Daniele', '2018-11-06 00:00:00', 'dnielecassia9@gmail.com', 'f', '123', NULL, NULL);
 
 --
 -- Índices de tabelas apagadas
 --
+
+--
+-- Índices de tabela `tb_atvFisica`
+--
+ALTER TABLE `tb_atvFisica`
+  ADD PRIMARY KEY (`cd_atv`,`cd_post`),
+  ADD KEY `fk_postAtividade` (`cd_post`);
 
 --
 -- Índices de tabela `tb_outros`
@@ -118,23 +154,29 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT de tabela `tb_outros`
 --
 ALTER TABLE `tb_outros`
-  MODIFY `cd_outros` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cd_outros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tb_post`
 --
 ALTER TABLE `tb_post`
-  MODIFY `cd_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cd_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `cd_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `cd_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restrições para dumps de tabelas
 --
+
+--
+-- Restrições para tabelas `tb_atvFisica`
+--
+ALTER TABLE `tb_atvFisica`
+  ADD CONSTRAINT `fk_postAtividade` FOREIGN KEY (`cd_post`) REFERENCES `tb_post` (`cd_post`);
 
 --
 -- Restrições para tabelas `tb_outros`
