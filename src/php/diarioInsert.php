@@ -17,7 +17,7 @@ if ($_SESSION['logado'] != true) {
   $cadastroSucesso = $diario->insert($_SESSION['cd'], $_POST);
     
   if($cadastroSucesso) {
-    echo 'SUCESSO!';
+    header('Location: ../php/index.php');
   }
   else {
     //melhorar mensagem

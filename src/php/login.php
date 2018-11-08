@@ -12,7 +12,7 @@
     $_SESSION['nome'] = $user->nm_user;
     $_SESSION['cd'] = $user->cd_user;
     $_SESSION['logado'] = true;
-    header('Location: ../html/index.html');
+    header('Location: ../php/index.php');
   }
   else {
     unset ($_SESSION['email']);

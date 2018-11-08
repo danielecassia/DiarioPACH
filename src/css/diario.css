@@ -1,0 +1,103 @@
+.container{
+    background-color: #FAFAFA;
+}
+
+alinhamentoTitulo.estilo{
+
+}
+
+h2{
+    color:#8A084B;
+}
+h3{
+    color:#04B4AE;
+}
+
+alinhamentoTitulo.estilo{
+    margin-top: 500px;
+    text-align: justify;
+}
+
+.estilo{
+    text-align: center;
+}
+#peso{
+    cursor: pointer;
+    text-align: center;
+}
+#sono{
+    cursor: pointer;
+}
+#agua{
+    cursor: pointer;
+}
+
+#sintomas{
+    cursor: pointer;
+}
+#texto{
+    cursor: pointer;
+}
+#med{
+    cursor: pointer;
+}
+
+.alinhamentoHumor{
+    text-align: center;
+}
+.humorSelecionado{
+    display: none;
+}
+.humorSelecionado:checked + label {
+    opacity: 1;
+    color: green;
+}
+.humorSelecionado + label {
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.3;
+}
+.humorSelecionado + label img {
+    margin: 0 !important;
+}
+
+.alinhamentoOutros{
+    text-align: justify;
+}
+.outrosSelecionado{
+    display: none;
+}
+.outrosSelecionado:checked + label {
+    opacity: 1;
+    color: green
+}
+.outrosSelecionado + label {
+    cursor: pointer;
+    opacity: 0.5;
+}
+.outrosSelecionado + label img {
+    margin: 0 !important;
+}
+
+.alinhamentoAtv{
+    text-align: justify;
+}
+.atvSelecionado{
+    display: none;
+}
+.atvSelecionado:checked + label {
+    opacity: 1;
+    color: green;
+}
+.atvSelecionado + label {
+    cursor: pointer;
+    text-align: center;
+    opacity: 0.5;
+}
+.atvSelecionado + label img {
+    margin: 0 !important;
+}
+
+.alinhamento{
+    text-align: right;
+}

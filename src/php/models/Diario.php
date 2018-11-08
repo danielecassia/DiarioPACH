@@ -8,8 +8,8 @@ class Diario extends Model {
 
 	public function insert($userLogado,array $attributes) {
 		$sqlPost = "insert into tb_post
-		(cd_user, titulo, dt_hr, humor, sintomas, texto, peso, agua, sono)
-		value (:cd_user, :titulo, :dt_hr, :humor, :sintomas, :texto, :peso, :agua, :sono)";
+		(cd_user, titulo, dt_hr, humor, sintomas, texto, peso, agua, sono, medicamentos)
+		value (:cd_user, :titulo, :dt_hr, :humor, :sintomas, :texto, :peso, :agua, :sono, :medicamentos)";
 
 		$sqlOutros = "insert into tb_outros
 		(cd_outros, cd_post)
@@ -35,6 +35,7 @@ class Diario extends Model {
 		$insertPost->bindValue("peso", $attributes["peso"]);
 		$insertPost->bindValue("agua", $attributes["agua"]);
 		$insertPost->bindValue("sono", $attributes["sono"]);
+		$insertPost->bindValue("medicamentos", $attributes["medicamentos"]);
 		$insertPost->execute();
 		$cdPost= $this->connection->lastInsertId(); 
 		
