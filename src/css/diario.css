@@ -97,8 +97,9 @@ alinhamentoTitulo.estilo{
 .atvSelecionado + label img {
     margin: 0 !important;
 }
-#ci{
-    margin-right: 100px;
+.alinhamento1{
+    margin-left:300px;
+    margin-right:300px
 }
 
 .alinhamento{

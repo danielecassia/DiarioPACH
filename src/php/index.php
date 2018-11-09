@@ -25,9 +25,9 @@ require "../bootstrap.php";
     <body>
         <div class="container">
             <div class="topo">
-                <img class="mb-4" src="../img/capaDefault.jpg" alt="" width="100%" height="100%" class="float-left">
+                <img class="mb-4" src="../img/capa.png" alt="" width="100%" height="100%" class="float-left">
                 <div class="foto">
-                    <img src="../img/userIndex.png" class="img-circle" alt="" width="200" height="200">
+                    <img src="../img/user2.jpg" class="img-circle" alt="" width="200" height="200">
                 </div>
             </div>
             <div class="tudo2">

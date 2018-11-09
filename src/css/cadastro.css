@@ -4,13 +4,9 @@ body {
   display: flex;
   flex: 1;
   align-items: center;
-  background-image: url("../img/01.jpg");
-  background-repeat: no-repeat, repeat;
-  background-color: black;
+  background-color: #FAFAFA;
 }
-.comtainer{
-  background-image: url(01.jpg);
-}
+
 .topo{
   box-align: center;
   height: 30%;
@@ -25,7 +21,7 @@ body {
   text-align: center;
 }
 
-/* .alinhamento{
+.alinhamento{
   text-align: right;
-} */
+}
 

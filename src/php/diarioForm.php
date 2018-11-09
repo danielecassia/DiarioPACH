@@ -146,35 +146,41 @@ if ($_SESSION['logado'] != true) {
                 <br>
     
                 <h3><b>Atividade Física</b></h3>
-                <div class="form-row">
+                <div class="form-row alinhamentoAtv">
                     <div class="form-group col-md-12 alinhamentoAtv">
                         <input type="checkbox" name="atv_fisica[]" value="1" id="corrida" class="atvSelecionado">
-                            <label for="corrida" id="corri">
-                                <img class="mb-4" src="../img/Icones/corrida.png" id="co" alt="" width="115%" height="115%"  class="float-left"><br>Corrida
-                            </label>
+                        <label for="corrida" id="corri" >
+                            <img class="mb-4 alinhamento1" src="../img/Icones/corrida.png" margin-right: '300px' id="co" alt="" width="80%" height="80%"  class="float-left"><br>Caminhada
+                        </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="2" id="ciclismo" class="atvSelecionado">
-                            <label for="ciclismo" id="ciclis">
-                                <img class="mb-4" src="../img/Icones/ciclismo.png" id="ci" alt="" width="115%" height="115%"  class="float-left"><br>Ciclismo
-                            </label>
+                        <label for="ciclismo" id="ciclis">
+                            <img class="mb-4 alinhamento1" src="../img/Icones/ciclismo.png" id="ci" alt="" width="115%" height="115%"  class="float-left"><br>Ciclismo
+                        </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="3" id="academia" class="atvSelecionado">
                             <label for="academia" id="acad">
-                                <img class="mb-4" src="../img/Icones/academia.png" id="agua" alt="" width="100%" height="100%"  class="float-left"><br>Academia
+                                <img class="mb-4 alinhamento1" src="../img/Icones/academia.png" id="agua" alt="" width="100%" height="100%"  class="float-left"><br>Academia
                             </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="4" id="dance_aerob" class="atvSelecionado">
                             <label for="dance_aerob" id="dace">
-                                <img class="mb-4" src="../img/Icones/danca.png" id="agua" alt="" width="60%" height="60%"  class="float-left"><br>Dança Aeróbica
+                                <img class="mb-4 alinhamento1" src="../img/Icones/danca.png" id="agua" alt="" width="60%" height="60%"  class="float-left"><br>Dança Aeróbica
                             </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="5" id="ioga" class="atvSelecionado">
                             <label for="ioga" id="id_ioga">
-                                <img class="mb-4" src="../img/Icones/ioga.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Ioga
+                                <img class="mb-4 alinhamento1" src="../img/Icones/ioga.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Ioga
                             </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="6" id="natacao" class="atvSelecionado">
                             <label for="natacao" id="nat">
-                                <img class="mb-4" src="../img/Icones/natacao.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Natação
+                                <img class="mb-4 alinhamento1" src="../img/Icones/natacao.png" id="agua" alt="" width="120%" height="120%"  class="float-left"><br>Natação
                             </label>
+
                         <input type="checkbox" name="atv_fisica[]" value="7" id="esp_equipe" class="atvSelecionado">
                             <label for="esp_equipe" id="esporte">
-                                <img class="mb-4" src="../img/Icones/equipe.png" id="agua" alt="" width="55%" height="55%"  class="float-left"><br>Esporte de Equipe
+                                <img class="mb-4 alinhamento1" src="../img/Icones/equipe.png" id="agua" alt="" width="55%" height="55%"  class="float-left"><br>Esporte de Equipe
                             </label>
                     </div>
                 </div>
