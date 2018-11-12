@@ -2,10 +2,6 @@
     background-color: #FAFAFA;
 }
 
-alinhamentoTitulo.estilo{
-
-}
-
 h2{
     color:#8A084B;  
 }
@@ -97,7 +93,7 @@ alinhamentoTitulo.estilo{
 .atvSelecionado + label img {
     margin: 0 !important;
 }
-.alinhamento1{
+alinhamento1 {
     margin-left:300px;
     margin-right:300px
 }

@@ -198,8 +198,8 @@ if ($_SESSION['logado'] != true) {
                 <br><br>
 
                 <div class= "align-bottom alinhamento">
-                    <a class="btn btn-outline-dark btn-lg form-group col-md-2" href="./index.php" role="button">Voltar</a>
-                    <button type="reset" class="btn btn-outline-danger btn-lg form-group col-md-2" >Descartar </button>
+                    <a class="btn btn-outline-danger btn-lg form-group col-md-2" href="./index.php" role="button">Descartar</a>
+                    <button type="reset" class="btn btn-outline-dark btn-lg form-group col-md-2" >Limpar </button>
                     <button type="submit" class="btn btn-outline-success btn-lg form-group col-md-2" >Salvar</button>
                 </div>
             </form>  
